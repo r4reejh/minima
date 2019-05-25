@@ -1,6 +1,7 @@
 function Link() {
     this.props = {};
     this.main = null;
+    this.next = null;
   }
   
 function create(props, main) {

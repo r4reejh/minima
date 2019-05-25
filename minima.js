@@ -1,6 +1,9 @@
-const routes = {
-    post: {}, get: {}
-};
+const _SERVER = require('./server')
+const _LINK = require('./link')
+
+const routes = {POST: {}, GET: {}};
+const get = async (routeName, chainArgs, handler) => routes.get[routeName] = await chain(chainArgs, handler);
+const post = async (routeName, chainArgs, handler) => routes.post[routeName] = await chain(chainArgs, handler);
 
 const chain = async (args, handler) => {
     try{
@@ -17,9 +20,10 @@ const chain = async (args, handler) => {
     }
 }
 
-const get = async (routeName, chainArgs, handler) => routes.get[routeName] = await chain(chainArgs, handler);
-const post = async (routeName, chainArgs, handler) => routes.post[routeName] = await chain(chainArgs, handler);
+const listen = (_PORT, callback) => _SERVER.listen(_PORT, callback);
 
 exports.routes = routes;
 exports.get = get;
 exports.post = post;
+exports.server = _SERVER;
+exports.link = _LINK;

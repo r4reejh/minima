@@ -9,6 +9,6 @@ mn.post("/test", jsonParser, async function(req, res){
     return res.json(req.body);
 })
 
-mn.server.listen(3000, ()=> {
-    console.log('server listening on port 3000');
+mn.server.listen(2005, ()=> {
+    console.log('server listening on port 2005');
 });

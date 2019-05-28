@@ -10,7 +10,6 @@ Tool used: `https://github.com/codesenberg/bombardier`
 ```
 .\bombardier-windows-amd64.exe -m POST -b '{\"hello\":\"world\"}' -c 1000  localhost:4000/test
 Bombarding http://localhost:4000/test for 10s using 1000 connection(s)
-[======================================================================================================================================================================================================================================] 10s
 Done!
 Statistics        Avg      Stdev        Max
   Reqs/sec     22175.06    1991.87   35328.62
@@ -25,7 +24,6 @@ Statistics        Avg      Stdev        Max
 ```
 .\bombardier-windows-amd64.exe -m POST -b '{\"hello\":\"world\"}' -c 1000  localhost:4100/test
 Bombarding http://localhost:4100/test for 10s using 1000 connection(s)
-[======================================================================================================================================================================================================================================] 10s
 Done!
 Statistics        Avg      Stdev        Max
   Reqs/sec      9416.73    2166.61   12050.30

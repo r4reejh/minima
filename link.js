@@ -4,7 +4,7 @@ function Link() {
     this.next = null;
   }
   
-function create(props, main) {
+function create({props, main}) {
     return function() {
         Link.call(this)
         this.props = props

@@ -21,7 +21,6 @@ const jsonParser = {
         req.on('end', () => {
             try{
                 req.body = JSON.parse(this.body);
-                //req.body = this.body;
                 this.next.main(req, res);
             } catch(ex) {
                 console.log(ex);

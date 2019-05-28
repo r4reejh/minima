@@ -1,24 +1,14 @@
-const http = require("http");
-const minima = require("../minima");
-const fs = require('fs');
-require('./routes/index')
+const mn = require('../minima');
+const jsonParser = require('../sample-links/jsonParser')
 
-// expense tracker
+mn.get("/users", async function(req, res){
+    return res.end("hello world");
+});
 
-minima.get('/favicon.ico', [], (req, res) => fs.createReadStream('favicon.png').pipe(res));
-minima.get('/test', [], (req, res)=> res.end(JSON.stringify({hello: "world"})));
-
-http.createServer(async function(req, res){
-    try{
-        //console.log(minima.routes);
-        //console.log(minima.routes.post['/test'].next);
-        return minima.routes[req.method.toLowerCase()][req.url].main(req, res);
-    } catch(ex) {
-        res.end("route not found");
-        console.log("not found");
-        console.log(ex);
-    }
+mn.post("/test", jsonParser(), async function(req, res){
+    return res.json(req.body);
 })
-.listen(4000, () => {
-    console.log("Server Listening on Port 4000");
+
+mn.server.listen(4000, ()=> {
+    console.log('server listening on port 4000');
 });

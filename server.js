@@ -4,12 +4,13 @@ const mn = require("./minima");
 // expense tracker
 const _SERVER = http.createServer(async function(req, res){
     try{
-        mn.routes[req.method][req.url].main(req, res);
-        return console.log(req.url+": 200");
+        //console.log(mn.routes);
+        if(mn.routes[req.method][req.url]) mn.routes[req.method][req.url].main(req, res);
+        else res.end('{error:"route not found"}');
+        //return console.log(req.url+": 200");
     } catch(ex) {
-        console.log(ex);
-        res.end("route not found");
-        return console.log(req.url+": 404");
+        res.end("server error");
+        //return console.log(req.url+": 404");
     }
 })
 

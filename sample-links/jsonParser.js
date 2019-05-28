@@ -12,6 +12,7 @@ const jsonParser = {
             });
         } catch(ex) {
             console.log('jsonParser error');
+            req.body = {}
             console.log(ex);
         }
     },

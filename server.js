@@ -7,6 +7,7 @@ const _SERVER = http.createServer(async function(req, res){
         mn.routes[req.method][req.url].main(req, res);
         return console.log(req.url+": 200");
     } catch(ex) {
+        console.log(ex);
         res.end("route not found");
         return console.log(req.url+": 404");
     }

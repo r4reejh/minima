@@ -1,0 +1,19 @@
+{
+  "name": "minima-example",
+  "version": "1.0.0",
+  "description": "an example application using the minima library",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "minima",
+    "server",
+    "side"
+  ],
+  "author": "Reejh Ghosh",
+  "license": "ISC",
+  "dependencies": {
+    "minima": "file:.."
+  }
+}

@@ -1,4 +1,4 @@
-const mn = require('../minima');
+const mn = require('minima');
 const jsonParser = require('../sample-links/jsonParser');
 
 mn.get('/users', async function(req, res) {

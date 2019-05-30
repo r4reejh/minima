@@ -14,6 +14,6 @@
   "author": "Reejh Ghosh",
   "license": "ISC",
   "dependencies": {
-    "minima": "file:.."
+    "minima": "git+https://git@github.com/r4reejh/minima.git"
   }
 }

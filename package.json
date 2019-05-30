@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/r4reejh/minima.git"
+    "url": "https://github.com/r4reejh/minima.git"
   },
   "keywords": [
     "server",

@@ -1,13 +1,21 @@
+/**
+ * Parent for Prototypal Inheritance
+ */
 function Link() {
-    this.main = null;
-    this.next = null;
-  }
-  
-function create({main}) {
-    return function() {
-        Link.call(this)
-        this.main = main
-    }
+  this.main = null;
+  this.next = null;
 }
 
-exports.create = create
+/**
+ *
+ * @param {Object} {main}
+ * @return {Object}
+ */
+function create({main}) {
+  return function() {
+    Link.call(this);
+    this.main = main;
+  };
+}
+
+exports.create = create;
